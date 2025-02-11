@@ -1,6 +1,6 @@
 def soustraire (a: int, b: int):
     print(f'Je soustrais {b} de {a}')
-    return (a - b)
+    return a - b
 
 a = int(input('Veuillez saisir un nombre "a" : '))
 b = int(input('Veuillez saisir un nombre "b" : '))
