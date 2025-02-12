@@ -16,5 +16,9 @@ def saisie_adn(entree_sequence: str):
     else :
         print("Erreur : veuillez entrer une séquence valide")
 
-entree_sequence = (input("Veuillez entrer une séquence ADN : "))
-print(saisie_adn(entree_sequence))
+# entree_sequence = (input("Veuillez entrer une séquence ADN : "))
+# print(saisie_adn(entree_sequence))
+
+def proportion(chaine_adn: str, sequence_adn: str):
+    for sequence_adn in chaine_adn :
+    
