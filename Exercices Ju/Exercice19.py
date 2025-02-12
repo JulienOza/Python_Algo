@@ -7,5 +7,14 @@ def verification_adn(saisie: str) -> bool:
     return True
     
         
-saisie = (input("Saisir la séquence ADN : "))
-print(verification_adn(saisie))
+# saisie = (input("Saisir la séquence ADN : "))
+# print(verification_adn(saisie))
+
+def saisie_adn(entree_sequence: str):
+    if verification_adn(entree_sequence):
+        return (entree_sequence)
+    else :
+        print("Erreur : veuillez entrer une séquence valide")
+
+entree_sequence = (input("Veuillez entrer une séquence ADN : "))
+print(saisie_adn(entree_sequence))
