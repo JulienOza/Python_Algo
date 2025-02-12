@@ -20,5 +20,10 @@ def saisie_adn(entree_sequence: str):
 # print(saisie_adn(entree_sequence))
 
 def proportion(chaine_adn: str, sequence_adn: str):
-    for sequence_adn in chaine_adn :
-    
+    return round((chaine_adn.count(sequence_adn)) * len(sequence_adn) / len(chaine_adn) * 100, 2)
+
+chaine_adn = input("Veuillez saisir une chaîne ADN : ").lower()
+sequence_adn = input("Veuillez saisir une sequence ADN à rechercher dans la chaîne : ").lower()
+
+print(f"La séquence {sequence_adn} est présente dans {proportion(chaine_adn, sequence_adn)} % de la chaîne")
+
