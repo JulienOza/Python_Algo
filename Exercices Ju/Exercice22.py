@@ -12,18 +12,16 @@ def saisie_limitee(nbre_notes):
         note = float(input(f"Saisir la note n°{i+1} : "))
         liste_notes.append(note)
 
-
 def saisie_libre():
-    note_stop = 0
+    note = 0
     i = 0
-    while note_stop >= 0:
+    while note >= 0:
         i += 1
         note = float(input(f"Saisir la note n°{i} : "))
-        note_stop = note
         liste_notes.append(note)
     liste_notes.pop(-1)
+    print("Note négative entrée, fin de la saisie")
         
-
-# saisie_limitee(3)
-saisie_libre()
+saisie_limitee(int(input("Indiquer le nombre de notes à saisir : ")))
+# saisie_libre()
 print(liste_notes)
