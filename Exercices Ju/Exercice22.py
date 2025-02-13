@@ -24,16 +24,20 @@ def saisie_libre():
     
 
 while True:
-    menu_depart = input("Veuillez choisir une methode de saisie :\n\n 1. Saisir un nombre de note choisi\n 2. Saisir un nombre de notes illimité, entrer une note negative pour stopper\n\nRéponse : ")
+    menu_depart = input("Veuillez choisir une methode de saisie :\n\n 1. Saisir un nombre de note choisi\n 2. Saisir un nombre de notes illimité, entrer une note negative pour stopper\n 3. Quitter\n\nRéponse : ")
 
     if menu_depart == "1":
         saisie_limitee(int(input("\nIndiquer le nombre de notes à saisir : ")))
-        print(f"\n{liste_notes}")
+        print(f"\nNotes saisies : {liste_notes}")
         break
 
     elif menu_depart == "2":
         saisie_libre()
-        print(f"\n{liste_notes}")
+        print(f"\nNotes saisies : {liste_notes}")
+        break
+
+    elif menu_depart == "3":
+        print("\nAu revoir, à bientôt !")
         break
 
     else :
@@ -54,19 +58,4 @@ while liste_notes != []:
             break
         case _:
             print("\nErreur, saisissez une option valide")
-    
-    # if menu_notes == "1":
-    #     print(f"Note maximale : {max(liste_notes)}")
-
-    # elif menu_notes == "2":
-    #     print(f"Note minimale : {min(liste_notes)}")
-
-    # elif menu_notes == "3":
-    #     print(f"Note Moyenne : {round(sum(liste_notes) / len(liste_notes), 2)}")
-
-    # elif menu_notes == "4":
-    #     print("Au revoir, à bientôt !")
-    #     break
-
-    # else :
-    #     print("Erreur, saisissez une option valide")
+   
