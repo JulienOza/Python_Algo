@@ -41,4 +41,4 @@ def retour_inattendu(liste):
     liste.append("revenant")
     return liste
 
-print(retour_inattendu(pos_racers))
+#print(retour_inattendu(pos_racers))
