@@ -39,3 +39,20 @@ while True:
     else :
         print("Erreur, saisissez une option valide")
 
+while liste_notes != []:
+    menu_notes = input("Veuillez choisir une option:\n 1. Note maximale\n 2. Note minimale\n 3. Moyenne des notes\n 4. Quitter\nRéponse : ")
+
+    if menu_notes == "1":
+        print(max(liste_notes))
+
+    elif menu_notes == "2":
+        print(min(liste_notes))
+
+    elif menu_notes == "3":
+        print(round(sum(liste_notes) / len(liste_notes), 2))
+
+    elif menu_notes == "4":
+        break
+
+    else :
+        print("Erreur, saisissez une option valide")
