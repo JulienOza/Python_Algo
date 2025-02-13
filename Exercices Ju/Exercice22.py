@@ -21,7 +21,21 @@ def saisie_libre():
         liste_notes.append(note)
     liste_notes.pop(-1)
     print("Note négative entrée, fin de la saisie")
-        
-saisie_limitee(int(input("Indiquer le nombre de notes à saisir : ")))
-# saisie_libre()
-print(liste_notes)
+    
+
+while True:
+    menu_depart = input("Veuillez choisir une methode de saisie :\n 1. Saisir un nombre de note choisi\n 2. Saisir un nombre de notes illimité, entrer une note negative pour stopper\nRéponse : ")
+
+    if menu_depart == "1":
+        saisie_limitee(int(input("Indiquer le nombre de notes à saisir : ")))
+        print(liste_notes)
+        break
+
+    elif menu_depart == "2":
+        saisie_libre()
+        print(liste_notes)
+        break
+
+    else :
+        print("Erreur, saisissez une option valide")
+
