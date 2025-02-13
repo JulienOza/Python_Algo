@@ -8,15 +8,19 @@
 
 def op_numbers(a: int, b: int):
 
-    somme = lambda a, b: a + b
-    print(f"La somme de 'a' et 'b' est {somme(a, b)} ")
+    somme = lambda a, b: round(a + b, 2)
+    print(f"\nLa somme de '{a}' et '{b}' est {somme(a, b)} ")
 
-    difference = lambda a, b: a - b
-    print(f"La difference de 'a' et 'b' est {difference(a, b)} ")
+    difference = lambda a, b: round(a - b, 2)
+    print(f"\nLa difference de '{a}' et '{b}' est {difference(a, b)} ")
 
-    quotient = lambda a, b: a / b
-    print(f"Le quotient de 'a' et 'b' est {quotient(a, b)} ")
+    quotient = lambda a, b: round(a / b, 2)
+    print(f"\nLe quotient de '{a}' et '{b}' est {quotient(a, b)} ")
 
-    produit = lambda a, b: a * b
-    print(f"Le produit de 'a' et 'b' est {produit(a, b)} ")
+    produit = lambda a, b: round(a * b, 2)
+    print(f"\nLe produit de '{a}' et '{b}' est {produit(a, b)} \n")
 
+a = float(input("\nSaisir un nombre 'a' : "))
+b = float(input("\nSaisir un nombre 'b' : "))
+
+op_numbers(a, b)
