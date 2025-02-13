@@ -9,7 +9,7 @@ liste_notes= []
 
 def saisie_limitee(nbre_notes):
     for i in range(nbre_notes):
-        note = float(input(f"Saisir la note n°{i+1} : "))
+        note = float(input(f"\nSaisir la note n°{i+1} : "))
         liste_notes.append(note)
 
 def saisie_libre():
@@ -17,42 +17,56 @@ def saisie_libre():
     i = 0
     while note >= 0:
         i += 1
-        note = float(input(f"Saisir la note n°{i} : "))
+        note = float(input(f"\nSaisir la note n°{i} : "))
         liste_notes.append(note)
     liste_notes.pop(-1)
-    print("Note négative entrée, fin de la saisie")
+    print("\nNote négative entrée, fin de la saisie")
     
 
 while True:
-    menu_depart = input("Veuillez choisir une methode de saisie :\n 1. Saisir un nombre de note choisi\n 2. Saisir un nombre de notes illimité, entrer une note negative pour stopper\nRéponse : ")
+    menu_depart = input("Veuillez choisir une methode de saisie :\n\n 1. Saisir un nombre de note choisi\n 2. Saisir un nombre de notes illimité, entrer une note negative pour stopper\n\nRéponse : ")
 
     if menu_depart == "1":
-        saisie_limitee(int(input("Indiquer le nombre de notes à saisir : ")))
-        print(liste_notes)
+        saisie_limitee(int(input("\nIndiquer le nombre de notes à saisir : ")))
+        print(f"\n{liste_notes}")
         break
 
     elif menu_depart == "2":
         saisie_libre()
-        print(liste_notes)
+        print(f"\n{liste_notes}")
         break
 
     else :
-        print("Erreur, saisissez une option valide")
+        print("\nErreur, saisissez une option valide")
 
 while liste_notes != []:
-    menu_notes = input("Veuillez choisir une option:\n 1. Note maximale\n 2. Note minimale\n 3. Moyenne des notes\n 4. Quitter\nRéponse : ")
+    menu_notes = input("\nVeuillez choisir une option:\n\n 1. Note maximale\n 2. Note minimale\n 3. Moyenne des notes\n 4. Quitter\n\nRéponse : ")
+    
+    match menu_notes:
+        case "1":
+            print(f"\nNote maximale : {max(liste_notes)}")
+        case "2":
+            print(f"\nNote minimale : {min(liste_notes)}")
+        case "3":
+            print(f"\nNote Moyenne : {round(sum(liste_notes) / len(liste_notes), 2)}")
+        case "4":
+            print("\nAu revoir, à bientôt !")
+            break
+        case _:
+            print("\nErreur, saisissez une option valide")
+    
+    # if menu_notes == "1":
+    #     print(f"Note maximale : {max(liste_notes)}")
 
-    if menu_notes == "1":
-        print(max(liste_notes))
+    # elif menu_notes == "2":
+    #     print(f"Note minimale : {min(liste_notes)}")
 
-    elif menu_notes == "2":
-        print(min(liste_notes))
+    # elif menu_notes == "3":
+    #     print(f"Note Moyenne : {round(sum(liste_notes) / len(liste_notes), 2)}")
 
-    elif menu_notes == "3":
-        print(round(sum(liste_notes) / len(liste_notes), 2))
+    # elif menu_notes == "4":
+    #     print("Au revoir, à bientôt !")
+    #     break
 
-    elif menu_notes == "4":
-        break
-
-    else :
-        print("Erreur, saisissez une option valide")
+    # else :
+    #     print("Erreur, saisissez une option valide")
