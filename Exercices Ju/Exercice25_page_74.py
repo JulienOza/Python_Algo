@@ -45,8 +45,7 @@ Code postal : {a['code postal']}
 
 ---------------------------------------
 """)
-        
-# voir_adresses(annuaire)
+
 
 # Fonction d'affichage d'une adresse
 def voir_adresse(ann, n):
@@ -60,7 +59,6 @@ Commune : {a['commune']}
 Code postal : {a['code postal']}
 """)
     
-# voir_adresse(annuaire, 2)
 
 # Fontion d'édition d'une adresse
 def edit_adresse(ann, n):
@@ -82,18 +80,13 @@ Commune : {a['commune']}
 Code postal : {a['code postal']}
 """)
 
-# edit_adresse(annuaire, 2)
-
 
 # Fonction de suppression d'une adresse
 def supp_adresse(ann, n):
     ann.pop(n-1)
     print(f"\nL'addresse {n} a bien été supprimée")
 
-# supp_adresse(annuaire, 1)
-# voir_adresses(annuaire)
-
-
+# Fonction d'ajout d'une adresse
 def ajout_adresse(ann):
     print("\n-- Ajout d'une nouvelle adresse --" )
     numero_de_voie = input("\nEntrez le numéro de voie: ")
@@ -115,8 +108,7 @@ def ajout_adresse(ann):
     print("\n*** Nouvelle adresse ajoutée *** ")
     voir_adresse(annuaire, -1)
 
-# ajout_adresse(annuaire)
-
+# Programme
 while True:
     menu_principal = input("""
 --- MENU PRINCIPAL ---
