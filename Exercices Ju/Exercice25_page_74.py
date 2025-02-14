@@ -117,3 +117,34 @@ def ajout_adresse(ann):
 
 # ajout_adresse(annuaire)
 
+while True:
+    menu_principal = input("""
+--- MENU PRINCIPAL ---
+1. Voir toutes les adresses
+2. Ajouter une adresse
+3. Editer une adresse
+4. Supprimer une adresse
+0. Quitter le programme
+
+Votre choix : """)
+
+    match menu_principal:
+        
+        case "1":
+            voir_adresses(annuaire)
+            continue
+
+        case "2":
+            ajout_adresse(annuaire)
+
+        case "3":
+            edit_adresse(annuaire, int(input("Entrer le numéro d'adresse que vous souhaitez modifier : ")))
+
+        case "4":
+            supp_adresse(annuaire, int(input("Entrer le numéro d'adresse que vous souhaitez supprimer : ")))
+
+        case "0":
+            break
+
+        case _ :
+            print("\ndErreur, veuillez entrer un choix valide")
