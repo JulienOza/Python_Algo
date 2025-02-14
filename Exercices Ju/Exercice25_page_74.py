@@ -132,7 +132,6 @@ Votre choix : """)
         
         case "1":
             voir_adresses(annuaire)
-            continue
 
         case "2":
             ajout_adresse(annuaire)
@@ -147,4 +146,4 @@ Votre choix : """)
             break
 
         case _ :
-            print("\ndErreur, veuillez entrer un choix valide")
+            print("\nErreur, veuillez entrer un choix valide")
