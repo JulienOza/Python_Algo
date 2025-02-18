@@ -3,7 +3,7 @@ import csv
 product = [
     input("Entrez Titre : "),
     int(input("Entrer Prix : ")),
-    int(input("Entrez Stock : "))
+    int(input("Entrer Stock : "))
 ]
 
 
